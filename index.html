@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <p>Weather App</p>
+        <form id="title-form">
+            <input id="search-title" type="search">
+            <input id="submit-title" type="submit" text="Search">
+        </form>
+    </header>
+    <main>
+        <form>
+            <input id="search" type="search">
+            <input id="submit" type="submit" text="Search">
+        </form>
+        <div id="body-wrapper">
+            <div id="current-tile">
+                <image></image>
+                <div class="current-temp">
+                    <p id="current-temp-number"></p>
+                    <p id="current-temp-feels-like"></p>
+                </div>
+                <div id="current-wind">
+                    <p id="current-wind-title">Wind</p>
+                    <p id="current-wind-number"></p>
+                    <p id="current-wind-direction"></p>
+                </div>
+                <div id="current-rain-title">
+                    <p id="current-rain-title">Rain</p>
+                    <p id="current-rain-number"></p>
+                </div>
+                <div id="current-humidity">
+                    <p id="current-humidity-title">Humidity</p>
+                    <p id="current-humidity-number"></p>
+                </div>
+                <div id="current-info">
+                    <p id="current-location"></p>
+                    <p id="current-region"></p>
+                    <p id="current-comment"></p>
+                </div>
+            </div>
+                <div id="tile-1" class="future-card">
+                    <p class="date"></p>
+                    <p class="temp"></p>
+                    <p class="wind"></p>
+                    <p class="rain-percentage"></p>
+                    <p class="rain-chance">Chance of rain</p>
+                    <p class="comment"></p>
+                    <p class="daylight-title">Daylight</p>
+                    <p class="daylight"></p>
+                </div>
+                <div id="tile-2" class="future-card">
+                    <p class="date"></p>
+                    <p class="temp"></p>
+                    <p class="wind"></p>
+                    <p class="rain-percentage"></p>
+                    <p class="rain-chance">Chance of rain</p>
+                    <p class="comment"></p>
+                    <p class="daylight-title">Daylight</p>
+                    <p class="daylight"></p>
+                </div>
+                <div id="tile-3" class="future-card">
+                    <p class="date"></p>
+                    <p class="temp"></p>
+                    <p class="wind"></p>
+                    <p class="rain-percentage"></p>
+                    <p class="rain-chance">Chance of rain</p>
+                    <p class="comment"></p>
+                    <p class="daylight-title">Daylight</p>
+                    <p class="daylight"></p>
+                </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
