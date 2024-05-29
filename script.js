@@ -59,8 +59,42 @@ async function makeApiRequest(location) {
         sunset: apiData.forecast.forecastday[2].astro.sunset,
       },
     };
-    console.log(locationObject);
+    return locationObject;
   } catch (error) {
     console.log("Error fetching data:" + error);
   }
 }
+
+function updateInnerHTML(element, content) {
+  element.innerHTML = content;
+}
+
+function updateImageSrc(element, content) {
+  element.style.backgroundImage = `url(${content})`;
+}
+
+async function updatePage(location) {
+  try {
+    let locationObject = await makeApiRequest(`${location}`);
+    updateImageSrc(
+      document.getElementById("current-tile"),
+      `https:${locationObject.current.image}`
+    );
+    updateImageSrc(
+      document.getElementById("tile-1"),
+      `https:${locationObject.dayOne.image}`
+    );
+    updateImageSrc(
+      document.getElementById("tile-2"),
+      `https:${locationObject.dayTwo.image}`
+    );
+    updateImageSrc(
+      document.getElementById("tile-3"),
+      `https:${locationObject.dayThree.image}`
+    );
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+updatePage("lisbon");
