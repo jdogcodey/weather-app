@@ -1,3 +1,4 @@
+// Function to get weather from Weather API and add to an object for use on site
 async function makeApiRequest(location) {
   try {
     let apiRequest = await fetch(

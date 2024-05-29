@@ -1,6 +1,18 @@
+@font-face {
+    font-family: 'Kanit-Bold';
+    src: url('./fonts/Kanit/Kanit-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Kanit';
+    src: url('./fonts/Kanit/Kanit-Regular.ttf') format('truetype');
+}
+
 * {
     background-color: #00CCFF;
     border: 1px solid red;
+    font-family: 'Kanit', Arial, Helvetica, sans-serif;
+    font-size: 16px;
 }
 
 header {
@@ -9,6 +21,37 @@ header {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+}
+
+header p {
+    font-size: 2rem;
+    font-family: 'Kanit-Bold', Arial, Helvetica, sans-serif;
+    align-self: center;
+    text-shadow: 2px 2px 4px #8C92AC;
+    padding-left: 20px;
+}
+
+header form {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin: 10px;
+}
+
+#search-title {
+    margin-right: 10px;
+    border: 2px solid grey;
+    background-color: white;
+    border-radius: 20px;
+}
+
+#submit-title {
+    border: none;
+    border-radius: 10px;
+    background-color: #8C92AC;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 main form {
@@ -52,5 +95,5 @@ main form {
     flex-flow: column nowrap;
     justify-content: space-between;
     border-radius: 10px;
-    
+
 }
