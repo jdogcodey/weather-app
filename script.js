@@ -111,21 +111,18 @@ async function updateAllFields(location) {
   let tempOne = document.getElementById("1-temp");
   let windOne = document.getElementById("1-wind");
   let rainPercOne = document.getElementById("1-rain-perc");
-  let rainChanceOne = document.getElementById("1-rain-chance");
   let commentOne = document.getElementById("1-comment");
   let daylightOne = document.getElementById("1-daylight");
   let dateTwo = document.getElementById("2-date");
   let tempTwo = document.getElementById("2-temp");
   let windTwo = document.getElementById("2-wind");
   let rainPercTwo = document.getElementById("2-rain-perc");
-  let rainChanceTwo = document.getElementById("2-rain-chance");
   let commentTwo = document.getElementById("2-comment");
   let daylightTwo = document.getElementById("2-daylight");
   let dateThree = document.getElementById("3-date");
   let tempThree = document.getElementById("3-temp");
   let windThree = document.getElementById("3-wind");
   let rainPercThree = document.getElementById("3-rain-perc");
-  let rainChanceThree = document.getElementById("3-rain-chance");
   let commentThree = document.getElementById("3-comment");
   let daylightThree = document.getElementById("3-daylight");
   updateInnerHTML(currentTemp, `${locationObject.current.temp}°`);
@@ -144,7 +141,6 @@ async function updateAllFields(location) {
   );
   updateInnerHTML(windOne, `${locationObject.dayOne.maxWind}mph`);
   updateInnerHTML(rainPercOne, `${locationObject.dayOne.willRain}%`);
-  updateInnerHTML(rainChanceOne, `${locationObject.dayOne.willRain}%`);
   updateInnerHTML(commentOne, locationObject.dayOne.comment);
   updateInnerHTML(
     daylightOne,
@@ -157,7 +153,6 @@ async function updateAllFields(location) {
   );
   updateInnerHTML(windTwo, `${locationObject.dayTwo.maxWind}mph`);
   updateInnerHTML(rainPercTwo, `${locationObject.dayTwo.willRain}%`);
-  updateInnerHTML(rainChanceTwo, `${locationObject.dayTwo.willRain}%`);
   updateInnerHTML(commentTwo, locationObject.dayTwo.comment);
   updateInnerHTML(
     daylightTwo,
@@ -170,7 +165,6 @@ async function updateAllFields(location) {
   );
   updateInnerHTML(windThree, `${locationObject.dayThree.maxWind}mph`);
   updateInnerHTML(rainPercThree, `${locationObject.dayThree.willRain}%`);
-  updateInnerHTML(rainChanceThree, `${locationObject.dayThree.willRain}%`);
   updateInnerHTML(commentThree, locationObject.dayThree.comment);
   updateInnerHTML(
     daylightThree,

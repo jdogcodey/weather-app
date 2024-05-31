@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
         <p>Weather App</p>
@@ -22,62 +24,78 @@
         <div id="body-wrapper">
             <div id="current-tile">
                 <div id="visible-content" class="no-background">
-                    <div class="current-temp" class="no-background">
-                        <p id="current-temp-number" class="no-background"></p>
-                        <p id="current-temp-feels-like" class="no-background"></p>
-                    </div>
-                    <div id="current-wind" class="no-background">
-                        <p id="current-wind-title" class="no-background">Wind</p>
-                        <p id="current-wind-number" class="no-background"></p>
-                        <p id="current-wind-direction" class="no-background"></p>
-                    </div>
-                    <div id="current-rain" class="no-background">
-                        <p id="current-rain-title" class="no-background">Rain</p>
-                        <p id="current-rain-number" class="no-background"></p>
-                    </div>
-                    <div id="current-humidity" class="no-background">
-                        <p id="current-humidity-title" class="no-background">Humidity</p>
-                        <p id="current-humidity-number" class="no-background"></p>
+                    <div id="current-spread" class="no-background">
+                        <div class="current-temp no-background">
+                            <p id="current-temp-number" class="no-background bold large"></p>
+                            <p id="feel-like-title" class="no-background">Feels like</p>
+                            <p id="current-temp-feels-like" class="no-background bold large"></p>
+                        </div>
+                        <div id="current-wind" class="no-background">
+                            <p id="current-wind-title" class="no-background bold large">Wind</p>
+                            <p id="current-wind-number" class="no-background bold large"></p>
+                            <p id="current-wind-direction" class="no-background bold large"></p>
+                        </div>
+                        <div id="current-rain" class="no-background">
+                            <p id="current-rain-title" class="no-background bold large">Rain</p>
+                            <p id="current-rain-number" class="no-background bold large"></p>
+                        </div>
+                        <div id="current-humidity" class="no-background">
+                            <p id="current-humidity-title" class="no-background bold large">Humidity</p>
+                            <p id="current-humidity-number" class="no-background bold large"></p>
+                        </div>
                     </div>
                     <div id="current-info" class="no-background">
-                        <p id="current-location" class="no-background"></p>
-                        <p id="current-region" class="no-background"></p>
-                        <p id="current-comment" class="no-background"></p>
+                        <p id="current-location" class="no-background bold large"></p>
+                        <p id="current-region" class="no-background bold"></p>
+                        <p id="current-comment" class="no-background bold"></p>
                     </div>
                 </div>
             </div>
-                <div id="tile-1" class="future-card">
-                    <p id="1-date" class="date no-background"></p>
-                    <p id="1-temp" class="temp no-background"></p>
-                    <p id="1-wind" class="wind no-background"></p>
-                    <p id="1-rain-perc" class="rain-percentage no-background"></p>
-                    <p id="1-rain-chance" class="rain-chance no-background">Chance of rain</p>
-                    <p id="1-comment" class="comment no-background"></p>
-                    <p class="daylight-title no-background">Daylight</p>
-                    <p id="1-daylight" class="daylight no-background"></p>
+            <div id="tile-1" class="future-card">
+                <p id="1-date" class="date no-background bold"></p>
+                <p id="1-temp" class="temp no-background bold large"></p>
+                <p id="1-wind" class="wind no-background bold large"></p>
+                <div class="no-background rain-class">
+                    <p id="1-rain-chance" class="rain-chance no-background bold large">Chance of rain</p>
+                    <p id="1-rain-perc" class="rain-percentage no-background bold large"></p>
                 </div>
-                <div id="tile-2" class="future-card">
-                    <p id="2-date" class="date no-background"></p>
-                    <p id="2-temp" class="temp no-background"></p>
-                    <p id="2-wind" class="wind no-background"></p>
-                    <p id="2-rain-perc" class="rain-percentage no-background"></p>
-                    <p id="2-rain-chance" class="rain-chance no-background">Chance of rain</p>
-                    <p id="2-comment" class="comment no-background"></p>
-                    <p class="daylight-title no-background">Daylight</p>
-                    <p id="2-daylight" class="daylight no-background"></p>
+                <p id="1-comment" class="comment no-background bold large"></p>
+                <div class="no-background daylight-class">
+                    <p class="daylight-title no-background bold large">Daylight</p>
+                    <p id="1-daylight" class="daylight no-background bold large"></p>
                 </div>
-                <div id="tile-3" class="future-card">
-                    <p id="3-date" class="date no-background"></p>
-                    <p id="3-temp" class="temp no-background"></p>
-                    <p id="3-wind" class="wind no-background"></p>
-                    <p id="3-rain-perc" class="rain-percentage no-background"></p>
-                    <p id="3-rain-chance" class="rain-chance no-background">Chance of rain</p>
-                    <p id="3-comment" class="comment no-background"></p>
-                    <p class="daylight-title no-background">Daylight</p>
-                    <p id="3-daylight" class="daylight no-background"></p>
+            </div>
+            <div id="tile-2" class="future-card">
+                <p id="2-date" class="date no-background bold"></p>
+                <p id="2-temp" class="temp no-background bold large"></p>
+                <p id="2-wind" class="wind no-background bold large"></p>
+                <div class="no-background rain-class">
+                    <p id="2-rain-chance" class="rain-chance no-background bold large">Chance of rain</p>
+                    <p id="2-rain-perc" class="rain-percentage no-background bold large"></p>
                 </div>
+                <p id="2-comment" class="comment no-background bold large"></p>
+                <div class="no-background daylight-class">
+                    <p class="daylight-title no-background bold large">Daylight</p>
+                    <p id="2-daylight" class="daylight no-background bold large"></p>
+                </div>
+            </div>
+            <div id="tile-3" class="future-card">
+                <p id="3-date" class="date no-background bold"></p>
+                <p id="3-temp" class="temp no-background bold large"></p>
+                <p id="3-wind" class="wind no-background bold large"></p>
+                <div class="no-background rain-class">
+                    <p id="3-rain-chance" class="rain-chance no-background bold large">Chance of rain</p>
+                    <p id="3-rain-perc" class="rain-percentage no-background bold large"></p>
+                </div>
+                <p id="3-comment" class="comment no-background bold large"></p>
+                <div class="no-background daylight-class">
+                    <p class="daylight-title no-background bold large">Daylight</p>
+                    <p id="3-daylight" class="daylight no-background bold large"></p>
+                </div>
+            </div>
         </div>
     </main>
     <script src="script.js"></script>
 </body>
+
 </html>
